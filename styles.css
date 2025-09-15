@@ -134,10 +134,82 @@ section {
     color: var(--secondary-color);
 }
 
+/* Menu de Pizzas */
+#menu .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item-content {
+    padding: 20px;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Seção Sobre e Contato */
+#sobre p, #contato p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contato .contact-info {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
 /* Rodapé */
 footer {
     background: var(--footer-bg);
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsividade para telas menores */
+@media(max-width: 768px) {
+    .nav-links {
+        display: none; /* Em um projeto real, aqui entraria um menu hamburguer */
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
 }
